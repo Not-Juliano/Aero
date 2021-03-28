@@ -1,19 +1,17 @@
 # Site settings
 title: Julianos Projects
-description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
-url: 'http://joshgerdes.com/jekyll-uno'
-baseurl: '/jekyll-uno'
+description: 'a place of fun'
+url: 'http://not-juliano.github.io/Aero'
+baseurl: '/Aero'
 # google_analytics: 'UA-XXXXXX-X'
 # disqus_shortname: 'your-disqus-name'
 # disable_landing_page: true
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
-  twitter_username: joshgerdes
-  facebook_username: joshgerdes
-  github_username:  joshgerdes
-  linkedin_username:  joshgerdes
+  name: 'Juliano Everett'
+  email: julianoeverett@gmail.com
+  github_username:  #
+  linkedin_username: #
 
 defaults:
   -
