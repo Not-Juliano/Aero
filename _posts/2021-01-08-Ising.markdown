@@ -102,7 +102,9 @@ def Initial_Lattice(N,M):
 
 Grid=Initial_Lattice(N,M)
 ```
-calculates Magnetization of the grid, which works out to be the summation of every point
+Start to create functions to get important values
+
+This calculates Magnetization(m) of the grid, which works out to be the summation of every point
 
 ``` python
 #If I were to rewrite this code having m= np.sum might lead to quicker times.
@@ -116,4 +118,81 @@ def magnetization(Lattice):
             m += Lattice[j,k]
   
     return m
+``` 
+Energy (E)
+``` python
+def Energy_Of_The_System(Lattice):
+    E=0.0
+ 
+    
+    for i in range(0,N):
+        for j in range(0,M):
+            
+            Spin= Lattice[i, j] #choosen spin
+    
+    
+            SumOfNeighbors= (Lattice[(i+1)%N, (j)]#Right
+                     + Lattice[(i-1)%N, (j)]#left
+                     + Lattice[(i) , (j+1)%M]#Up
+                     + Lattice[(i) , (j-1)%M])#Down
+                     
+    
+            E+=J*Spin*SumOfNeighbors
+        
+    return E
+#Energy_Of_The_System(Grid)
+```
+Using Energy calculation to find DeltaE and determine spin flips
+
+``` python
+
+def EnergyCalc(Lattice, i, j):
+    
+    
+    N, M = Lattice.shape #Giving my Lattice a size
+    
+    
+    Spin= Lattice[i, j] #choosen spin
+    
+    
+    SumOfNeighbors= (Lattice[(i+1)%N, (j)]#Right
+                     + Lattice[(i-1)%N, (j)]#left
+                     + Lattice[(i) , (j+1)%M]#Up
+                     + Lattice[(i) , (j-1)%M])#Down
+                     
+    
+    
+    
+    dE = (2*J)*(Spin*SumOfNeighbors) #Formula for dE
+                   
+                   
+    if dE <= 0 or exp(-dE / kT) > np.random.random(): #If dE <=0 or boltzmann factor greater than random swtich
+        Lattice[i, j] *= -1
+```
+Creating movement through the lattice
+
+
+``` python
+#This is the simplest case, but experimenting with other iterations over the grid can lead to changed results.
+
+#I've found going randomly across the lattice caused the grid to continue to be random. 
+#there might be a proper way to do this, but I've not found it.
+
+#The coordinates of this movement type for a 3x3 Lattice is commented in the cell below if interested. 
+
+
+def Movement(Lattice):
+    N, M = Lattice.shape
+
+    for i in range(N):
+        for j in range(M): 
+            EnergyCalc(Lattice, i, j)
+            
+#=========== Calls and saves values for measurements while the grid is being updated============            
+            
+    Mag.append(magnetization(Lattice))
+    Energy.append(Energy_Of_The_System(Lattice))
+    return Lattice
+
+
 ```
