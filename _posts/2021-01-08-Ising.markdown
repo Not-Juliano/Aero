@@ -263,7 +263,9 @@ fig.update_layout(width=1000, height=500, showlegend=True)
 
 fig.show()
 ```
-With a ferromagenetic configuration You end up with some variation of the following 3 gifs. With the first being near critcal temperatures, the second being low temperature and the last being extrememly high temperatures.
+With a ferromagenetic configuration, there's some variation of the following 3 gifs. With the first being near critcal temperatures, the second being low temperature and the last being extrememly high temperatures.
+
+
 ![Critical](https://lh4.googleusercontent.com/1ut-V4qm406cM4edBu5ZYXlvWApbcBrLVvYhB9rvBefTnoRrKjdYrinxJsoF7SweRZrSi17il7_h8EFQktquIYItokbfzLzfu-KTnNKmfCeqw-LapAkAEdeI7FAwC9xgHgibcg)
 ![low](https://lh6.googleusercontent.com/0BZZX7-_BDXT1NsQWcZxIzBc73Khg7Pfj9HJRb00XPwU2xoc5Hs8aZTJR1MYtGHZg8a9cqsS8aw8qHQpbiTVcnV0UUF6WZ_MYA8yJFE)
 ![High](https://lh5.googleusercontent.com/xUQCWXPscYpazucr_PdnnO_pw20feGOuU2lS6N51Atj_g4gXA43SPGF0_dNjXeg4KrY3iQIfDrRzzRKwU9ZuT9OJOmw1cnTznP99-38)
