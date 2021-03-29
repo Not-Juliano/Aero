@@ -89,8 +89,7 @@ Energy=[] #Places to store energy values
 
 create the random spin grid
 ``` python
-# Each spin has two possible states +1 or −1.
-
+# Each spin has two possible states +1 or −1. So we create a function that chooses between one of the values randomly.
 
 def Initial_Lattice(N,M):
     Spinvalues=[-1,1]
