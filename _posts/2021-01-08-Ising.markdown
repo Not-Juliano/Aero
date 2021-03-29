@@ -28,13 +28,13 @@ J also tells you how these things prefer to align.
 When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
 
 
-<img src= "/images/Ferromagnetic.png">
+<img src= "https://lh3.googleusercontent.com/pw/ACtC-3fUYQ-HaKMIsog-RES1NLZDyEzwBo0tPXxdcVOM8q5iU0UOZIHPe6tfZIXc2BSCoKrfE2tuyyo_WfzOqscV4EjxdY12XruW5wBdijyvW2GD7M2k_4R1lMQqVpfivS9hu0O9p5jrw6RptiSUn-Ir8sQ=s137-no?authuser=0">
 
 
 When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
 
 
-![Antiferro](/images/Antiferromagnetic.png)
+<img src="https://lh3.googleusercontent.com/pw/ACtC-3dmt0_ffpytuYbO-UepRNm50_UJICLzyW5wekvbwNsyEa8ZRxRenOjcuIt3ErV9truD_QRtxhIWiBRvjKyEtf5n7sL3SP7iE8D7xWRsDj02IPD3oer93jTrGWijBarH-xbgsSQcPxMvJCTs6miy_-E=w150-h134-no?authuser=0">
 
 
 
