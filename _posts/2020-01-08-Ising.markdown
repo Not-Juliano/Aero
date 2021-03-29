@@ -48,9 +48,11 @@ When h=0 the hamiltonian is written as: H= -J (Chosen Spin * Σ Neighbors )
 Here's an example of a single spin calculation:
 #
 
-![Antiferro](/images/SpinCalculations.png)
+![Spins](/images/SpinCalculations.png)
 
 #
+
+With this we now have enough information to move onto the coding.
 ``` python
 #Imports
 
