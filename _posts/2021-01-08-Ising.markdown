@@ -85,3 +85,21 @@ if kT==22:
 Mag=[]#Places to store magnetization  values
 Energy=[] #Places to store energy values
 ```
+
+
+create the random spin grid
+``` python
+# Each spin has two possible states +1 or −1.
+
+
+def Initial_Lattice(N,M):
+    Spinvalues=[-1,1]
+    return np.random.choice(Spinvalues, size=(N, M))
+
+
+
+
+#Here we save it so we can do some calculations from the starting point.
+
+Grid=Initial_Lattice(N,M)
+```
