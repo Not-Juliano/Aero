@@ -11,8 +11,19 @@ The model has gained the love of some physicist because it applies to many areas
 
 
 So how does the model work? In essence you can break this ensemble down into three main parts. A hamiltonian, Spin dynamics, and phase transitions.
+The Equation is shown below:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?{\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" title="{\color{Blue} \boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" /></a>
+
+J is the coupling strength. (How strongly these things interact). 
+σ represents each spin. 
+h is the external magnetic field
+
+
+J also tells you how these things prefer to align.
+When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
+When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
+
 
 ``` python
 #Imports
