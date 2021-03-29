@@ -47,8 +47,7 @@ When h=0 the hamiltonian is written as: H= -J (Chosen Spin * Σ Neighbors )
 Here's an example of a single spin calculation:
 
 
-![Spins](/images/SpinCalculations.png)
-
+<img src= "https://lh3.googleusercontent.com/US5lcGZtot0ZK3Qb3kieLhXUJbDmuU7OhsoT5pcyu4gGRVisS7nKei77j_eQ8bfhupfZlqKViJzD9g0-bMMs4Hd2tkKDZcGktkkL9pT8auwxDGUEJ96QldI9rdbwVleU2-7sxUF0hZrfJIxZWn6xlHQ1WQZ7l35Yjgh3SEiycDxK19xWmrFG1trYjB-MJ5_0W7CK9ijMiRvnAXE9iGfxtHBLHBP_wpVmEMouHc1CU-4rZhhSnUUmQLdfRjUx7Ks2wbv8PNamDsQsmKgqm4aBUZZEj7np1rPDXmOumNw8GT7Hvo9FAywvMBQIJOYscUhA8f20L8Sl-kRDn1jXt92x4Vxml8XirL5GwIK7yQ160VCk-RqxlCioPrFZHCMcVaktFfYaqswitCtlUV61duFQFOlp4tTJU1s6JX-IyRGNmVu3UmA83WiGQTHPPXbG1t6MnPsk0T3-tlhzSfNdF1KbV7Xz9sb7asdk_Wg7lHtX_MDvPx2xaAoe_zL7JNKw1b56vk3Tf4dJAgUlFUOw2bh1j9PTGdTOiA15QX3FybEIYo7-OkKupfDhwF2M6EzKw5L2MR05NJKdZB6trSMOaxn4iAp92dHHyZqL6Fq33Q1-aX_N5nDWXvGmblcX3A5fNHuNL8I76QwMzMyoPJOd9z7pqWo-N2hBHdcinw6UTPiwJZaAhjEdIoauAZw88uK-y-5DDlYVHtWRo8LuAi8ljg=w536-h226-no?authuser=0">
 
 
 With this we now have enough information to move onto the coding.
