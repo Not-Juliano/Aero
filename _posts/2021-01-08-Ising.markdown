@@ -84,6 +84,6 @@ if kT==22:
     
     print('Critical temperature is given as 2 / log(1 + sqrt(2), e), or', kT, 'and will be used for this system. ')
 
-```
 Mag=[]#Places to store magnetization  values
 Energy=[] #Places to store energy values
+```
