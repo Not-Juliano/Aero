@@ -27,12 +27,16 @@ J also tells you how these things prefer to align.
 When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
 #
 
-![Ferro](/images/huh.png)
+![Ferro](/images/ferromagnetic.png)
 
 #
 When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
+#
+
+![Antiferro](/images/antiferromagnetic.png)
 
 
+#
 ``` python
 #Imports
 
