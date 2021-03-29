@@ -20,11 +20,12 @@ J is the coupling strength. (How strongly these things interact).
 σ represents each spin. 
 
 h is the external magnetic field
-
+#
 
 J also tells you how these things prefer to align.
 
 When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
+
 
 When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
 
