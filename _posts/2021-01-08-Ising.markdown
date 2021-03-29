@@ -178,8 +178,9 @@ Creating movement through the lattice
 #I've found going randomly across the lattice caused the grid to continue to be random. 
 #there might be a proper way to do this, but I've not found it.
 
-#The coordinates of this movement type for a 3x3 Lattice is commented in the cell below if interested. 
-
+#The coordinates of this movement type for a 3x3 Lattice is commented below if interested. 
+#X_Coordinates=[0, 1, 2, 0, 1, 2, 0, 1, 2]
+#Y_Coordinates=[0, 0, 0, 1, 1, 1, 2, 2, 2]
 
 def Movement(Lattice):
     N, M = Lattice.shape
@@ -196,3 +197,73 @@ def Movement(Lattice):
 
 
 ```
+In the following part I Used Jake Vanderplas' [visualization tutorial](https://jakevdp.github.io/blog/2017/12/11/live-coding-cython-ising-model).
+
+```python
+def Visualize(Lattice):
+    return Image.fromarray(np.uint8((Lattice + 1) * 0.5 * 255))  # 0 ... 255 Must be an 8 bit unsigned integer
+    N_Frames=50
+
+def Evolution(images):
+    
+    
+    def show(frame=(0, len(images)-1)):
+        
+        
+        return Visualize(images[frame])
+    
+    
+    return interact(show)
+
+
+
+images = [Grid]
+
+
+for i in range(N_Frames):
+    
+    images.append(Movement(images[-1].copy()))
+    
+Evolution(images);
+```
+
+
+```python
+FrameList=np.arange(0,len(Energy),1)
+
+fig = make_subplots(
+    rows=1, cols=2,
+    specs=[[{"type": "bar"}, {"type": "pie"}],#I didn't change these. These specs just happend to work. Others don't
+           ],
+)
+
+#Each fig.add_trace is a new graph
+#Making traces on the same row and col allow them to be plotted together. 
+
+
+#traces for Energy and Magnetization
+fig.add_trace(go.Scatter(y=(Energy), name='Energy points(J)', mode='lines', marker_color='red'),row=1,col=1)
+fig.add_trace(go.Scatter(y=(Mag), name='Magnetization(T)', mode='lines', marker_color='orchid'),row=1,col=1)
+fig.update_layout(title='Evolution Data of The Ising Model',
+                   xaxis_title='Frames',
+                   yaxis_title='Quantity')
+
+#Trace for the table
+fig.add_trace(go.Table(
+    header=dict(values=['Frame #','Energies', 'Magnetizations'],
+                line_color='darkslategray',
+                fill_color='lightskyblue',
+                align='left'),
+    cells=dict(values=[FrameList,Energy, Mag], # 2nd column
+               line_color='darkslategray',
+               fill_color='lightcyan',
+               align='left')),row=1,col=2)            
+
+fig.update_layout(width=1000, height=500, showlegend=True)
+
+fig.show()
+```
+With a ferromagenetic configuration You end up with some variation of the following 3 gifs. With the first being near critcal temperatures, the second being low temperature and the last being extrememly high temperatures.
+![Critical](https://lh4.googleusercontent.com/1ut-V4qm406cM4edBu5ZYXlvWApbcBrLVvYhB9rvBefTnoRrKjdYrinxJsoF7SweRZrSi17il7_h8EFQktquIYItokbfzLzfu-KTnNKmfCeqw-LapAkAEdeI7FAwC9xgHgibcg)
+![low](https://lh6.googleusercontent.com/0BZZX7-_BDXT1NsQWcZxIzBc73Khg7Pfj9HJRb00XPwU2xoc5Hs8aZTJR1MYtGHZg8a9cqsS8aw8qHQpbiTVcnV0UUF6WZ_MYA8yJFE)
+![High](https://lh5.googleusercontent.com/xUQCWXPscYpazucr_PdnnO_pw20feGOuU2lS6N51Atj_g4gXA43SPGF0_dNjXeg4KrY3iQIfDrRzzRKwU9ZuT9OJOmw1cnTznP99-38)
