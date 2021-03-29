@@ -25,8 +25,11 @@ h is the external magnetic field
 J also tells you how these things prefer to align.
 
 When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
+#
+
 ![Ferro](/images/huh.png)
 
+#
 When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
 
 
