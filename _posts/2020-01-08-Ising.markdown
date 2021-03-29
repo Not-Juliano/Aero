@@ -16,7 +16,7 @@ The Equation is shown below:
 <a href="https://www.codecogs.com/eqnedit.php?latex={\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?{\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" title="{\color{Blue} \boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" /></a>
 
 
-##Magentism
+
 J is the coupling strength. (How strongly these things interact). 
 
 σ represents each spin. 
@@ -39,13 +39,18 @@ When J<0, the spin wants to be unlike it's neighbors- making this interaction An
 
 
 #
-##Spin Dynamics
-For every spin, if the change in the Hamiltonian is favorable  for the system (Meaning E<=0) Switch the spin, Or else switch this spin by a probability.
+For every spin, if the change in the Hamiltonian is favorable for the system (Meaning Energy<=0) Switch the spin, Or else switch this spin by a probability.
 
-Probability is given by  the boltzmann factor: exp(-ΔE/kT)
+Probability is given by  the boltzmann factor: exp(-ΔE/kT) and Spins are given by their states, where up is +1, down is -1.
 
-Spins are given by their states, where up is +1, down is -1
+When h=0 the hamiltonian is written as: H= -J (Chosen Spin * Σ Neighbors )
 
+Here's an example of a single spin calculation:
+#
+
+![Antiferro](/images/SpinCalculations.png)
+
+#
 ``` python
 #Imports
 
