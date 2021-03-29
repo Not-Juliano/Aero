@@ -1,8 +1,8 @@
 ---
 title:  "Ising Model"
-date:   2021-01-08 1:04:23
+date:   2021-01-08 15:04:23
 categories: [Statistical Mechanics]
-tags: [Ising],[Mechanics]
+tags: [Ising]
 ---
 The Ising model is an example of a Canonical ensemble in thermodynamics. In most cases; It’s used to theoretically describe ferromagnetism, and used for phase transitions.
 The model was invented by Wilhelm Lenz in 1920 and is named after Ernst Ising who solved it in 1D [source](http://farside.ph.utexas.edu/teaching/329/lectures/node110.html)
