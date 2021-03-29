@@ -53,8 +53,12 @@ Here's an example of a single spin calculation:
 #
 
 With this we now have enough information to move onto the coding.
+
+First the imports. 
 ``` python
 #Imports
+#pip install Pillow
+#pip install ipywidgets
 
 import numpy as np
 from math import exp, log, e, sqrt
@@ -65,9 +69,21 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from ipywidgets import interact
 ```
+Next we focus on creating a grid that a user can input values into. Each point on this grid or lattice can be considered a particle with a spin.
+``` python
+N=int(input('What is the length of one side of your grid?')) #Eg 50 makes a 50x50 grid
+M=N #Grid is even. playing with an uneven grid might be fun.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+J=int(input('What is the Coupling constant? 1 is most common. '))
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+kT= float(input('What is your Temperature from 0~6? For critical temperature type 22  '))
+
+if kT==22:
+    
+    kT = 2 / log(1 + sqrt(2), e)#critical temp from Lars Onsangers solution
+    
+    print('Critical temperature is given as 2 / log(1 + sqrt(2), e), or', kT, 'and will be used for this system. ')
+
+```
+Mag=[]#Places to store magnetization  values
+Energy=[] #Places to store energy values
