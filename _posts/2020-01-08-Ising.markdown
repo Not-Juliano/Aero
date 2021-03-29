@@ -15,6 +15,8 @@ The Equation is shown below:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex={\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" target="_blank"><img src="https://latex.codecogs.com/svg.latex?{\color{Blue}&space;\boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" title="{\color{Blue} \boldsymbol{H}=\sum_{ij}^{}\boldsymbol{J}_{ij}\boldsymbol{\sigma_{i}}\boldsymbol{\sigma_{j}}-\sum_{i}^{}\boldsymbol{h}_{i}\boldsymbol{\sigma_{i}}}" /></a>
 
+
+##Magentism
 J is the coupling strength. (How strongly these things interact). 
 
 σ represents each spin. 
@@ -27,16 +29,23 @@ J also tells you how these things prefer to align.
 When J>0, the spin wants to be like neighbors- making this interaction ferromagnetic 
 #
 
-![Ferro](/images/ferromagnetic.png)
+![Ferro](/images/Ferromagnetic.png)
 
 #
 When J<0, the spin wants to be unlike it's neighbors- making this interaction Antiferromagnetic
 #
 
-![Antiferro](/images/antiferromagnetic.png)
+![Antiferro](/images/Antiferromagnetic.png)
 
 
 #
+##Spin Dynamics
+For every spin, if the change in the Hamiltonian is favorable  for the system (Meaning E<=0) Switch the spin, Or else switch this spin by a probability.
+
+Probability is given by  the boltzmann factor: exp(-ΔE/kT)
+
+Spins are given by their states, where up is +1, down is -1
+
 ``` python
 #Imports
 
