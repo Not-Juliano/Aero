@@ -5,6 +5,65 @@ categories: [Orbital Mechanics]
 tags: [Orbital]
 ---
 ```python
-
+from __future__ import print_function, division
+import numpy as np
+from PyAstronomy import pyasl
+import matplotlib.pylab as plt
+ 
+# Create a Keplerian elliptical orbit to mimic that of earth's
+# semi-major axis of 1 length units,
+# a period of 1 time units, eccentricity of 0.017,
+# longitude of ascending node of 18.273 degrees, an inclination
+# of 23.5 deg, and a periapsis argument of 85.901 deg.
+ 
+ 
+ 
+orbit = pyasl.KeplerEllipse(1.0, 1.0, e=0.017, Omega=18.272, i=23.5, w=85.901)
+ 
+# Get a time axis
+t = np.linspace(0, 4, 200)
+ 
+# Calculate the orbit position at the given points
+# in a Cartesian coordinate system.
+pos = orbit.xyzPos(t)
+print("Shape of output array: ", pos.shape)
+ 
+# x, y, and z coordinates for 50th time point
+print("x, y, z for 50th point: ", pos[50, ::])
+ 
+# Calculate orbit radius as a function of the
+radius = orbit.radius(t)
+ 
+# Calculate velocity on orbit
+vel = orbit.xyzVel(t)
+ 
+# Find the nodes of the orbit (Observer at -z)
+ascn, descn = orbit.xyzNodes_LOSZ()
+ 
+# Plot x and y coordinates of the orbit
+plt.subplot(2, 1, 1)
+plt.title("Periapsis (red diamond), Asc. node (green circle), desc. node (red circle)")
+plt.xlabel("East ->")
+plt.ylabel("North ->")
+plt.plot([0], [0], 'k+', markersize=9)
+plt.plot(pos[::, 1], pos[::, 0], 'bp')
+ 
+ 
+# Point of periapsis
+plt.plot([pos[0, 1]], [pos[0, 0]], 'rd')
+ 
+ 
+# Nodes of the orbit
+plt.plot([ascn[1]], [ascn[0]], 'go', markersize=10)
+plt.plot([descn[1]], [descn[0]], 'ro', markersize=10)
+ 
+ 
+ 
+# Plot RV
+plt.subplot(2, 1, 2)
+plt.xlabel("Time")
+plt.ylabel("Radial velocity [length/time]")
+plt.plot(t, vel[::, 2], 'r.-')
+plt.show()
 
 ```
